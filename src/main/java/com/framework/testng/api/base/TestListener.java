@@ -20,14 +20,11 @@ public class TestListener implements ITestListener {
 		
 		if (islogIssue){
 			//url, username, api token and project key
-			JiraServiceProvider jsp = new JiraServiceProvider("https://api-training.atlassian.net/","hari.radhakrishnan@testleaf.com","8kd8oZs0NhvMDlwNpFU240E9","LD");
+			JiraServiceProvider jsp = new JiraServiceProvider("https://api-training.atlassian.net/","hari.radhakrishnan@testleaf.com","8kd8oZs0NhvMDlwNpFU240E9","LEAF");
 			String issueDescription = "Failure Reason from Automation Testing\n\n"+result.getThrowable().getMessage()+"\n";
 			issueDescription.concat(ExceptionUtils.getFullStackTrace(result.getThrowable()));
 			String issueSummary = result.getMethod().getConstructorOrMethod().getMethod()+"Failed in Automation Testing";
 			jsp.createJiraIssue("Bug",issueSummary,issueDescription,"Automated Testing");
 		}
-
-			
-
 	}
 }
