@@ -7,7 +7,7 @@ public class LoginPage extends ProjectSpecificMethods{
 	
 	
 	public LoginPage enterUserName(String data) {	
-		clearAndType(locateElement(Locators.ID,"username123"), data);
+		clearAndType(locateElement(Locators.ID,"username"), data);
 		return this;
 	}	
 
